@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Listado de canciones</title>
+ 
+</head>
+<body>
+  <h1>Listado de canciones</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Artista</th>
+        <th>Álbum</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% for (var i = 0; i < canciones.length; i++) { %>
+        <tr>
+          <td><%= canciones[i].nombre %></td>
+          <td><%= canciones[i].artista %></td>
+          <td><%= canciones[i].album %></td>
+        </tr>
+      <% } %>
+    </tbody>
+  </table>
+  <a href="/">Agregar nueva canción</a>
+</body>
+</html>
+<style>
+  body {
+    background-color: #f5f5f5;
+    font-family: Arial, sans-serif;
+  }
+  h1 {
+    text-align: center;
+    color: #080808;
+  }
+  table {
+    margin: 0 auto;
+    border-collapse: collapse;
+    width: 80%;
+    max-width: 800px;
+    background-color: #fff;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+  }
+  th, td {
+    padding: 10px;
+    text-align: left;
+  }
+  th {
+    background-color:  #4caf50;
+    color: #fff;
+  }
+  tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  tr:hover {
+    background-color: #ddd;
+  }
+  a {
+  display: block;
+  text-align: center;
+  margin-top: 20px;
+  color: #444;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+  a:hover {
+    color: #666;
+  }
+</style>
